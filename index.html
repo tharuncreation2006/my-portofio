@@ -1,0 +1,1531 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tharun P | AI/ML Developer & Creative Technologist</title>
+  <meta name="description" content="Portfolio of Tharun P - AI/ML Developer, Full Stack Developer, Frontend Developer, and UI/UX Designer building intelligent systems and modern web experiences.">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+  
+  <!-- Fonts: Space Grotesk, Outfit, Fira Code -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+
+  <!-- Custom Futuristic Cursor -->
+  <div id="custom-cursor" aria-hidden="true"></div>
+  <div id="cursor-follower" aria-hidden="true"></div>
+
+  <!-- Background Animated Canvas -->
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <!-- Atmospheric Glow Overlays -->
+  <div class="ambient-glow glow-cyan" aria-hidden="true"></div>
+  <div class="ambient-glow glow-purple" aria-hidden="true"></div>
+  <div class="ambient-glow glow-magenta" aria-hidden="true"></div>
+
+  <!-- ==========================================
+       CINEMATIC INTRO EXPERIENCE
+       ========================================== -->
+  <div id="cinematic-intro" role="dialog" aria-modal="true" aria-label="Intro Experience">
+    <canvas id="intro-canvas" aria-hidden="true"></canvas>
+    
+    <div class="intro-content">
+      <div class="intro-badge">
+        <span class="pulse-dot"></span> SYSTEM ONLINE
+      </div>
+      <h1 class="intro-title" data-text="THARUN P">THARUN P</h1>
+      <p class="intro-subtitle">AI/ML DEVELOPER • CREATIVE TECHNOLOGIST</p>
+      
+      <!-- 3D Photo Preview Box in Intro -->
+      <div class="intro-preview-stage">
+        <div class="intro-photo-card card-1 active">
+          <img src="assets/profile1.png" alt="Tharun P - AI/ML Developer">
+        </div>
+        <div class="intro-photo-card card-2">
+          <img src="assets/profile2.png" alt="Tharun P - Creative Technologist">
+        </div>
+        <div class="intro-orbit-ring ring-1"></div>
+        <div class="intro-orbit-ring ring-2"></div>
+      </div>
+
+      <button id="enter-btn" class="cyber-btn primary-btn">
+        <span class="btn-glitch"></span>
+        <span class="btn-text">INITIALIZE SYSTEM <i class="fa-solid fa-arrow-right"></i></span>
+        <span class="btn-neon-line"></span>
+      </button>
+      
+      <p class="intro-hint">Click button or scroll down to skip intro</p>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       FIXED GLASS NAVIGATION
+       ========================================== -->
+  <header class="glass-nav-header">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-accent">&lt;</span>THARUN<span class="logo-dot">.</span>P<span class="logo-accent">/&gt;</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <a href="#home" class="nav-link active">HOME</a>
+        <a href="#about" class="nav-link">ABOUT</a>
+        <a href="#tech-stack" class="nav-link">TECH ARSENAL</a>
+        <a href="#ai-mech" class="nav-link">AI MECH</a>
+        <a href="#skills" class="nav-link">SKILLS</a>
+        <a href="#projects" class="nav-link">PROJECTS</a>
+        <a href="#journey" class="nav-link">JOURNEY</a>
+        <a href="#education" class="nav-link">EDUCATION</a>
+        <a href="#contact" class="nav-link">CONTACT</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#contact" class="cyber-btn sm-btn">
+          <span>CONNECT</span>
+        </a>
+        <button class="mobile-toggle" aria-label="Toggle navigation menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer" aria-label="Mobile Navigation">
+      <nav class="mobile-nav-links">
+        <a href="#home" class="mobile-link">HOME</a>
+        <a href="#about" class="mobile-link">ABOUT</a>
+        <a href="#tech-stack" class="mobile-link">TECH ARSENAL</a>
+        <a href="#ai-mech" class="mobile-link">AI MECH</a>
+        <a href="#skills" class="mobile-link">SKILLS</a>
+        <a href="#projects" class="mobile-link">PROJECTS</a>
+        <a href="#journey" class="mobile-link">JOURNEY</a>
+        <a href="#education" class="mobile-link">EDUCATION</a>
+        <a href="#contact" class="mobile-link">CONTACT</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    
+    <!-- ==========================================
+         HERO SECTION WITH 3D TWO-PHOTO S-CURVE
+         ========================================== -->
+    <section id="home" class="hero-section">
+      <div class="hero-grid-container">
+        
+        <!-- Left Hero Text Content -->
+        <div class="hero-text-content">
+          <div class="cyber-tag reveal-element">
+            <span class="tag-icon"><i class="fa-solid fa-code"></i></span>
+            <span class="tag-text">CREATIVE DIGITAL ENGINEER</span>
+          </div>
+
+          <h2 class="hero-greeting reveal-element">Hello, I'm</h2>
+          <h1 class="hero-name reveal-element" data-text="THARUN P">THARUN P</h1>
+          
+          <div class="role-animator reveal-element">
+            <span class="role-prefix">I am a </span>
+            <span id="role-text" class="role-dynamic">AI/ML Developer</span>
+            <span class="cursor-blink">|</span>
+          </div>
+
+          <p class="hero-bio reveal-element">
+            Building intelligent systems, modern web experiences and interactive digital products with AI, code and creativity.
+          </p>
+
+          <div class="hero-cta-group reveal-element">
+            <a href="#projects" class="cyber-btn primary-btn glow-btn">
+              <span class="btn-text">EXPLORE MY WORK <i class="fa-solid fa-compass"></i></span>
+            </a>
+            <a href="#contact" class="cyber-btn secondary-btn">
+              <span class="btn-text">LET'S CONNECT <i class="fa-solid fa-paper-plane"></i></span>
+            </a>
+          </div>
+
+          <div class="hero-tech-pills reveal-element">
+            <span class="pill"><i class="fa-brands fa-python"></i> Python</span>
+            <span class="pill"><i class="fa-brands fa-react"></i> React</span>
+            <span class="pill"><i class="fa-solid fa-brain"></i> Machine Learning</span>
+            <span class="pill"><i class="fa-solid fa-palette"></i> UI/UX Design</span>
+          </div>
+        </div>
+
+        <!-- Right Hero 3D Two-Photo S-Curve Interactive Stage -->
+        <div class="hero-stage-container reveal-element">
+          <div class="stage-3d-wrapper" id="stage-3d">
+            
+            <!-- Neon Trajectory SVG overlay -->
+            <svg class="infinity-path-svg" viewBox="0 0 400 400" aria-hidden="true">
+              <path class="path-glow" d="M 100,200 C 100,100 200,100 200,200 C 200,300 300,300 300,200 C 300,100 200,100 200,200 C 200,300 100,300 100,200 Z" />
+              <circle id="neon-beam-dot" r="6" cx="100" cy="200" />
+            </svg>
+
+            <!-- Holographic Base Ring -->
+            <div class="holo-base-ring">
+              <div class="ring-inner"></div>
+              <div class="ring-pulse"></div>
+            </div>
+
+            <!-- Floating PNG Photo 1 Cutout -->
+            <div class="photo-cutout-wrapper photo-1 active" id="photo1-wrap">
+              <div class="photo-glow-aura"></div>
+              <img src="assets/profile1.png" alt="Tharun P Profile 1" class="cutout-img">
+              <div class="photo-cyber-label">
+                <span class="label-code">DEV // ID 01</span>
+                <span class="label-name">THARUN P</span>
+              </div>
+            </div>
+
+            <!-- Floating PNG Photo 2 Cutout -->
+            <div class="photo-cutout-wrapper photo-2" id="photo2-wrap">
+              <div class="photo-glow-aura aura-magenta"></div>
+              <img src="assets/profile2.png" alt="Tharun P Profile 2" class="cutout-img">
+              <div class="photo-cyber-label">
+                <span class="label-code">DEV // ID 02</span>
+                <span class="label-name">CREATIVE ARCHITECT</span>
+              </div>
+            </div>
+
+            <!-- Manual 3D Stage Controls -->
+            <div class="stage-control-panel">
+              <button id="toggle-photo-btn" class="stage-btn" title="Switch 3D Viewpoint">
+                <i class="fa-solid fa-arrows-rotate"></i> <span>SWAP 3D PERSPECTIVE</span>
+              </button>
+              <span class="stage-status-tag" id="stage-mode-tag">MODE: S-CURVE AUTO LOOP</span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="scroll-indicator">
+        <a href="#about">
+          <span class="scroll-text">SCROLL TO EXPLORE</span>
+          <div class="scroll-mouse">
+            <div class="scroll-wheel"></div>
+          </div>
+          <i class="fa-solid fa-chevron-down arrow-down"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         ABOUT SECTION (WHO I AM)
+         ========================================== -->
+    <section id="about" class="section-padding">
+      <div class="section-container">
+        
+        <div class="section-header center">
+          <span class="section-subtitle">// DISCOVER MY BACKGROUND</span>
+          <h2 class="section-title">WHO I <span class="text-gradient">AM</span></h2>
+          <div class="title-underline"></div>
+        </div>
+
+        <div class="about-grid">
+          <!-- Left Column: Typography Hero -->
+          <div class="about-left-col reveal-element">
+            <div class="hero-statement-card glass-panel">
+              <div class="card-neon-corner top-left"></div>
+              <div class="card-neon-corner bottom-right"></div>
+              
+              <h3 class="manifesto-text">
+                I <span class="cyan-glow">BUILD.</span><br>
+                I <span class="purple-glow">DESIGN.</span><br>
+                I <span class="magenta-glow">CREATE.</span>
+              </h3>
+
+              <p class="manifesto-sub">
+                Transforming complex algorithms into elegant, user-centric digital products.
+              </p>
+
+              <div class="cyber-terminal-box">
+                <div class="terminal-header">
+                  <span class="term-dot red"></span>
+                  <span class="term-dot yellow"></span>
+                  <span class="term-dot green"></span>
+                  <span class="term-title">tharun_philosophy.py</span>
+                </div>
+                <div class="terminal-body">
+                  <code><span class="keyword">def</span> <span class="func">create_future</span>():</code>
+                  <code>&nbsp;&nbsp;code = <span class="str">"Clean & Modular"</span></code>
+                  <code>&nbsp;&nbsp;ai = <span class="str">"Intelligent & Adaptive"</span></code>
+                  <code>&nbsp;&nbsp;design = <span class="str">"Futuristic & Human"</span></code>
+                  <code>&nbsp;&nbsp;<span class="keyword">return</span> code + ai + design</code>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Detailed Narrative & Stats -->
+          <div class="about-right-col reveal-element">
+            <div class="about-narrative glass-panel">
+              <h3 class="narrative-heading">Passionate AI/ML Developer & Creative Technologist</h3>
+              <p class="narrative-p">
+                I am an <strong>AI/ML student and full-stack developer</strong> dedicated to bridging the gap between cutting-edge artificial intelligence and intuitive frontend experiences. My passion lies in engineering intelligent models and turning ideas into robust web applications.
+              </p>
+              <p class="narrative-p">
+                From developing machine learning algorithms that analyze medical diagnostics and audio frequencies to crafting responsive React interfaces and automated testing suites, I thrive on solving complex technical challenges with clean code and modern aesthetic standards.
+              </p>
+
+              <!-- Real Factual Stat Badges -->
+              <div class="about-stats-grid">
+                <div class="stat-card glass-card">
+                  <div class="stat-icon"><i class="fa-solid fa-brain"></i></div>
+                  <div class="stat-info">
+                    <span class="stat-value">AI / ML</span>
+                    <span class="stat-label">Model Development & Analysis</span>
+                  </div>
+                </div>
+
+                <div class="stat-card glass-card">
+                  <div class="stat-icon"><i class="fa-solid fa-layer-group"></i></div>
+                  <div class="stat-info">
+                    <span class="stat-value">WEB DEV</span>
+                    <span class="stat-label">Full Stack & Frontend Systems</span>
+                  </div>
+                </div>
+
+                <div class="stat-card glass-card">
+                  <div class="stat-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                  <div class="stat-info">
+                    <span class="stat-value">UI / UX</span>
+                    <span class="stat-label">Interactive Modern Design</span>
+                  </div>
+                </div>
+
+                <div class="stat-card glass-card">
+                  <div class="stat-icon"><i class="fa-solid fa-rocket"></i></div>
+                  <div class="stat-info">
+                    <span class="stat-value">PROJECTS</span>
+                    <span class="stat-label">End-to-End Applications</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         TECH ARSENAL SECTION
+         ========================================== -->
+    <section id="tech-stack" class="section-padding dark-bg-alt">
+      <div class="section-container">
+        
+        <div class="section-header center">
+          <span class="section-subtitle">// POWERED BY MODERN TOOLS</span>
+          <h2 class="section-title">TECH <span class="text-gradient">ARSENAL</span></h2>
+          <p class="section-desc">Technologies and frameworks I utilize to design, build, and deploy digital solutions.</p>
+          <div class="title-underline"></div>
+        </div>
+
+        <div class="tech-grid">
+          
+          <!-- Category 1: Frontend -->
+          <div class="tech-category-card glass-panel reveal-element">
+            <div class="category-header">
+              <i class="fa-solid fa-desktop cat-icon"></i>
+              <h3>Frontend Engineering</h3>
+            </div>
+            <div class="tech-nodes-list">
+              <div class="tech-node" data-desc="Semantic markup, accessible structure, modern HTML5 standard.">
+                <i class="fa-brands fa-html5 node-icon cyan"></i>
+                <span class="node-name">HTML5</span>
+              </div>
+              <div class="tech-node" data-desc="Modern styling, CSS Grid, Flexbox, custom animations & glassmorphism.">
+                <i class="fa-brands fa-css3-alt node-icon cyan"></i>
+                <span class="node-name">CSS3</span>
+              </div>
+              <div class="tech-node" data-desc="ES6+, asynchronous JS, Web APIs, DOM manipulation.">
+                <i class="fa-brands fa-square-js node-icon yellow"></i>
+                <span class="node-name">JavaScript</span>
+              </div>
+              <div class="tech-node" data-desc="Component architecture, hooks, state management, SPA routing.">
+                <i class="fa-brands fa-react node-icon cyan"></i>
+                <span class="node-name">React</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 2: Programming -->
+          <div class="tech-category-card glass-panel reveal-element">
+            <div class="category-header">
+              <i class="fa-solid fa-code cat-icon"></i>
+              <h3>Programming Languages</h3>
+            </div>
+            <div class="tech-nodes-list">
+              <div class="tech-node" data-desc="Primary language for AI/ML modeling, script automation, backend APIs.">
+                <i class="fa-brands fa-python node-icon blue"></i>
+                <span class="node-name">Python</span>
+              </div>
+              <div class="tech-node" data-desc="Object-oriented programming, algorithm implementation & data structures.">
+                <i class="fa-brands fa-java node-icon red"></i>
+                <span class="node-name">Java</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 3: AI / Machine Learning -->
+          <div class="tech-category-card glass-panel reveal-element">
+            <div class="category-header">
+              <i class="fa-solid fa-brain cat-icon"></i>
+              <h3>AI & Machine Learning</h3>
+            </div>
+            <div class="tech-nodes-list">
+              <div class="tech-node" data-desc="ML classification, regression, SVM, Naive Bayes & model evaluation.">
+                <i class="fa-solid fa-gears node-icon orange"></i>
+                <span class="node-name">Scikit-learn</span>
+              </div>
+              <div class="tech-node" data-desc="High-performance numerical computing & multi-dimensional array ops.">
+                <i class="fa-solid fa-calculator node-icon blue"></i>
+                <span class="node-name">NumPy</span>
+              </div>
+              <div class="tech-node" data-desc="Data cleaning, manipulation, frame operations & tabular analysis.">
+                <i class="fa-solid fa-table node-icon purple"></i>
+                <span class="node-name">Pandas</span>
+              </div>
+              <div class="tech-node" data-desc="Audio processing, feature extraction, spectrograms & emotion classification.">
+                <i class="fa-solid fa-waveform node-icon magenta"></i>
+                <span class="node-name">Librosa</span>
+              </div>
+              <div class="tech-node" data-desc="Supervised/unsupervised learning algorithms & predictive modeling.">
+                <i class="fa-solid fa-network-wired node-icon cyan"></i>
+                <span class="node-name">Machine Learning</span>
+              </div>
+              <div class="tech-node" data-desc="Text tokenization, sentiment extraction & natural language techniques.">
+                <i class="fa-solid fa-language node-icon green"></i>
+                <span class="node-name">NLP</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 4: Development & Tools -->
+          <div class="tech-category-card glass-panel reveal-element">
+            <div class="category-header">
+              <i class="fa-solid fa-screwdriver-wrench cat-icon"></i>
+              <h3>Development & Tools</h3>
+            </div>
+            <div class="tech-nodes-list">
+              <div class="tech-node" data-desc="Version control, branching workflows & commit tracking.">
+                <i class="fa-brands fa-git-alt node-icon orange"></i>
+                <span class="node-name">Git</span>
+              </div>
+              <div class="tech-node" data-desc="Code hosting, repository management & open-source collaboration.">
+                <i class="fa-brands fa-github node-icon white"></i>
+                <span class="node-name">GitHub</span>
+              </div>
+              <div class="tech-node" data-desc="HTTP endpoints, JSON data fetching & backend service integration.">
+                <i class="fa-solid fa-cloud-arrow-down node-icon cyan"></i>
+                <span class="node-name">REST APIs</span>
+              </div>
+              <div class="tech-node" data-desc="Relational database queries, schema design & data management.">
+                <i class="fa-solid fa-database node-icon blue"></i>
+                <span class="node-name">SQL</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         AI MECH 3D GUARDIAN SHOWCASE SECTION
+         ========================================== -->
+    <section id="ai-mech" class="section-padding dark-bg-alt">
+      <div class="section-container">
+        
+        <div class="section-header center">
+          <span class="section-subtitle">// CYBER GUARDIAN & AI SYSTEM ARCHITECTURE</span>
+          <h2 class="section-title">3D AI <span class="text-gradient">MECH GUARDIAN</span></h2>
+          <p class="section-desc">Interactive 3D blueprint model symbolizing high-performance AI architecture, neural decision engines, and system defense.</p>
+          <div class="title-underline"></div>
+        </div>
+
+        <div class="mech-showcase-slide-wrapper">
+          <div class="mech-3d-stage glass-panel full-slide-stage" id="mech-stage">
+            
+            <!-- Scanning Laser Overlay Line -->
+            <div class="mech-scan-laser"></div>
+
+            <!-- HUD Target Reticle Overlay -->
+            <div class="mech-hud-overlay">
+              <div class="hud-corner top-left"></div>
+              <div class="hud-corner top-right"></div>
+              <div class="hud-corner bottom-left"></div>
+              <div class="hud-corner bottom-right"></div>
+              <div class="hud-target-circle"></div>
+              <div class="hud-tech-text top">3D glTF MODEL: OBSIDIAN FURY // JAEGER CORE</div>
+              <div class="hud-tech-text bottom">Model: Obsidian Fury by oiopu (CC-BY-4.0)</div>
+            </div>
+
+            <!-- 3D Robot WebGL Object Viewport Container -->
+            <div class="mech-figure-container" id="mech-figure-container">
+              <canvas id="mech-canvas-3d" class="mech-canvas-3d"></canvas>
+
+              <!-- FLOATING INTERACTIVE HUD CALLOUT CARDS OVERLAYED ON FRONT OF MECH -->
+              <div class="mech-front-callouts-overlay">
+                
+                <!-- Callout 1: Visor / Neural HUD (Top Center) -->
+                <div class="mech-hotspot-pin pin-head active" data-pin="visor">
+                  <div class="pin-pulse-target" title="Inspect Neural HUD Visor">
+                    <span class="pin-ring"></span>
+                    <span class="pin-dot"></span>
+                  </div>
+                  <div class="pin-connector-line"></div>
+                  <div class="pin-card glass-card">
+                    <div class="pin-card-header">
+                      <span class="pin-code">01 // NEURAL HUD VISOR</span>
+                    </div>
+                    <p class="pin-title">Computer Vision & Sentiment AI</p>
+                    <p class="pin-desc">Real-time facial & audio emotion classification using Librosa & SVM signal processing.</p>
+                  </div>
+                </div>
+
+                <!-- Callout 2: Plasma Core / Reactor (Chest Center) -->
+                <div class="mech-hotspot-pin pin-chest active" data-pin="reactor">
+                  <div class="pin-pulse-target" title="Inspect Plasma Vector Core">
+                    <span class="pin-ring ring-orange"></span>
+                    <span class="pin-dot dot-orange"></span>
+                  </div>
+                  <div class="pin-connector-line"></div>
+                  <div class="pin-card glass-card">
+                    <div class="pin-card-header">
+                      <span class="pin-code orange-code">02 // PLASMA VECTOR CORE</span>
+                    </div>
+                    <p class="pin-title">PyTorch & Scikit-Learn Engine</p>
+                    <p class="pin-desc">Multi-variate medical risk classifier delivering 1.2 TFLOPS neural output.</p>
+                  </div>
+                </div>
+
+                <!-- Callout 3: Shoulder Armor Plating (Top Left) -->
+                <div class="mech-hotspot-pin pin-shoulder-left active" data-pin="armor">
+                  <div class="pin-pulse-target" title="Inspect Titanium Defense Armor">
+                    <span class="pin-ring ring-purple"></span>
+                    <span class="pin-dot dot-purple"></span>
+                  </div>
+                  <div class="pin-connector-line"></div>
+                  <div class="pin-card glass-card">
+                    <div class="pin-card-header">
+                      <span class="pin-code purple-code">03 // TITANIUM SYSTEM DEFENSE</span>
+                    </div>
+                    <p class="pin-title">Automated Selenium QA Suite</p>
+                    <p class="pin-desc">Robust error boundary isolation & cross-browser automated integration testing.</p>
+                  </div>
+                </div>
+
+                <!-- Callout 4: Plasma Chainsaw (Right Arm) -->
+                <div class="mech-hotspot-pin pin-arm-right active" data-pin="weapon">
+                  <div class="pin-pulse-target" title="Inspect Dual Plasma Chainsaws">
+                    <span class="pin-ring ring-magenta"></span>
+                    <span class="pin-dot dot-magenta"></span>
+                  </div>
+                  <div class="pin-connector-line"></div>
+                  <div class="pin-card glass-card">
+                    <div class="pin-card-header">
+                      <span class="pin-code magenta-code">04 // DUAL PLASMA CHAINSAWS</span>
+                    </div>
+                    <p class="pin-title">React & Full-Stack Systems</p>
+                    <p class="pin-desc">High-concurrency REST API consumption, custom state hooks, & DOM algorithms.</p>
+                  </div>
+                </div>
+
+                <!-- Callout 5: Hyper-Vector Thrusters (Rear View) -->
+                <div class="mech-hotspot-pin pin-thruster active" data-pin="thruster">
+                  <div class="pin-pulse-target" title="Inspect Hyper-Vector Thrusters">
+                    <span class="pin-ring ring-orange"></span>
+                    <span class="pin-dot dot-orange"></span>
+                  </div>
+                  <div class="pin-connector-line"></div>
+                  <div class="pin-card glass-card">
+                    <div class="pin-card-header">
+                      <span class="pin-code orange-code">05 // HYPER-VECTOR THRUSTERS</span>
+                    </div>
+                    <p class="pin-title">FastAPI & Async Cloud Architecture</p>
+                    <p class="pin-desc">High-throughput microservices, real-time WebSockets, and low-latency neural pipeline execution.</p>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="mech-3d-hint"><i class="fa-solid fa-hand-pointer"></i> DRAG TO ROTATE 360° REAL 3D MODEL</div>
+            </div>
+
+            <!-- Viewport Controls & Angle Switcher -->
+            <div class="mech-stage-controls">
+              <button class="mech-angle-btn active" data-view="portrait">
+                <i class="fa-solid fa-camera"></i> <span>3D HERO PORTRAIT</span>
+              </button>
+              <button class="mech-angle-btn" data-view="front">
+                <i class="fa-solid fa-robot"></i> <span>3D FULL BODY FRONT</span>
+              </button>
+              <button class="mech-angle-btn" data-view="persp">
+                <i class="fa-solid fa-cube"></i> <span>3D 3/4 COMBAT POSE</span>
+              </button>
+              <button class="mech-angle-btn" data-view="back">
+                <i class="fa-solid fa-shield-halved"></i> <span>3D REAR THRUSTERS</span>
+              </button>
+              <button class="mech-angle-btn highlight" id="mech-auto-rotate-btn">
+                <i class="fa-solid fa-arrows-rotate"></i> <span id="auto-rotate-text">AUTO 360° ROTATE</span>
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SKILLS MATRIX SECTION
+         ========================================== -->
+    <section id="skills" class="section-padding">
+      <div class="section-container">
+        
+        <div class="section-header center">
+          <span class="section-subtitle">// EVALUATING CAPABILITIES</span>
+          <h2 class="section-title">SKILL <span class="text-gradient">MATRIX</span></h2>
+          <p class="section-desc">Practical competence levels across key technical domains.</p>
+          <div class="title-underline"></div>
+        </div>
+
+        <div class="skills-matrix-grid">
+          
+          <!-- Skill Group 1: Development -->
+          <div class="skill-card glass-panel reveal-element">
+            <div class="skill-card-head">
+              <i class="fa-solid fa-code-branch"></i>
+              <h3>DEVELOPMENT</h3>
+            </div>
+            
+            <div class="skill-bars-list">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="name">HTML5 / CSS3</span>
+                  <span class="level-tag tag-comfortable">Comfortable</span>
+                </div>
+                <div class="progress-track"><div class="progress-fill fill-comfortable" style="width: 88%;"></div></div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="name">JavaScript (ES6+)</span>
+                  <span class="level-tag tag-intermediate">Intermediate</span>
+                </div>
+                <div class="progress-track"><div class="progress-fill fill-intermediate" style="width: 82%;"></div></div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="name">React Framework</span>
+                  <span class="level-tag tag-intermediate">Intermediate</span>
+                </div>
+                <div class="progress-track"><div class="progress-fill fill-intermediate" style="width: 78%;"></div></div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="name">REST API Integration</span>
+                  <span class="level-tag tag-working">Working Knowledge</span>
+                </div>
+                <div class="progress-track"><div class="progress-fill fill-working" style="width: 75%;"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill Group 2: Programming -->
+          <div class="skill-card glass-panel reveal-element">
+            <div class="skill-card-head">
+              <i class="fa-solid fa-terminal"></i>
+              <h3>PROGRAMMING</h3>
+            </div>
+            
+            <div class="skill-bars-list">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="name">Python</span>
+                  <span class="level-tag tag-comfortable">Comfortable</span>
+                </div>
+                <div class="progress-track"><div class="progress-fill fill-comfortable" style="width: 85%;"></div></div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="name">Java</span>
+                  <span class="level-tag tag-intermediate">Intermediate</span>
+                </div>
+                <div class="progress-track"><div class="progress-fill fill-intermediate" style="width: 75%;"></div></div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="name">SQL Queries</span>
+                  <span class="level-tag tag-working">Working Knowledge</span>
+                </div>
+                <div class="progress-track"><div class="progress-fill fill-working" style="width: 72%;"></div></div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="name">Git Version Control</span>
+                  <span class="level-tag tag-comfortable">Comfortable</span>
+                </div>
+                <div class="progress-track"><div class="progress-fill fill-comfortable" style="width: 82%;"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill Group 3: AI / Machine Learning -->
+          <div class="skill-card glass-panel reveal-element">
+            <div class="skill-card-head">
+              <i class="fa-solid fa-microchip"></i>
+              <h3>AI / MACHINE LEARNING</h3>
+            </div>
+            
+            <div class="skill-bars-list">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="name">Scikit-learn & ML Models</span>
+                  <span class="level-tag tag-intermediate">Intermediate</span>
+                </div>
+                <div class="progress-track"><div class="progress-fill fill-intermediate" style="width: 80%;"></div></div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="name">Pandas & NumPy</span>
+                  <span class="level-tag tag-comfortable">Comfortable</span>
+                </div>
+                <div class="progress-track"><div class="progress-fill fill-comfortable" style="width: 84%;"></div></div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="name">Librosa Audio Analysis</span>
+                  <span class="level-tag tag-working">Working Knowledge</span>
+                </div>
+                <div class="progress-track"><div class="progress-fill fill-working" style="width: 74%;"></div></div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="name">NLP Fundamentals</span>
+                  <span class="level-tag tag-learning">Learning</span>
+                </div>
+                <div class="progress-track"><div class="progress-fill fill-learning" style="width: 68%;"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill Group 4: Design & Methodology -->
+          <div class="skill-card glass-panel reveal-element">
+            <div class="skill-card-head">
+              <i class="fa-solid fa-compass-drafting"></i>
+              <h3>DESIGN & METHODOLOGY</h3>
+            </div>
+            
+            <div class="skill-bars-list">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="name">UI / UX Prototyping</span>
+                  <span class="level-tag tag-intermediate">Intermediate</span>
+                </div>
+                <div class="progress-track"><div class="progress-fill fill-intermediate" style="width: 78%;"></div></div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="name">Responsive Mobile Layouts</span>
+                  <span class="level-tag tag-comfortable">Comfortable</span>
+                </div>
+                <div class="progress-track"><div class="progress-fill fill-comfortable" style="width: 86%;"></div></div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="name">Interactive Animations</span>
+                  <span class="level-tag tag-intermediate">Intermediate</span>
+                </div>
+                <div class="progress-track"><div class="progress-fill fill-intermediate" style="width: 80%;"></div></div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="name">Automated Testing (Selenium)</span>
+                  <span class="level-tag tag-working">Working Knowledge</span>
+                </div>
+                <div class="progress-track"><div class="progress-fill fill-working" style="width: 72%;"></div></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         PROJECTS SECTION (SELECTED WORK)
+         ========================================== -->
+    <section id="projects" class="section-padding dark-bg-alt">
+      <div class="section-container">
+        
+        <div class="section-header center">
+          <span class="section-subtitle">// PORTFOLIO HIGHLIGHTS</span>
+          <h2 class="section-title">SELECTED <span class="text-gradient">WORK</span></h2>
+          <p class="section-desc">Explore projects across AI/ML diagnostic tools, full-stack applications, and interactive experiences.</p>
+          <div class="title-underline"></div>
+        </div>
+
+        <div class="projects-grid">
+          
+          <!-- Project 01: AI Heart Disease Diagnosis -->
+          <article class="project-card glass-panel reveal-element" data-project-id="1">
+            <div class="project-card-banner banner-heart">
+              <div class="banner-svg-wrapper">
+                <!-- SVG Medical AI Visual -->
+                <svg viewBox="0 0 400 200" class="project-svg">
+                  <path class="ecg-line" d="M 10 100 L 80 100 L 95 60 L 110 140 L 125 40 L 140 120 L 155 100 L 390 100" />
+                  <g class="neural-nodes">
+                    <circle cx="100" cy="70" r="6" class="node-dot cyan" />
+                    <circle cx="130" cy="40" r="6" class="node-dot magenta" />
+                    <circle cx="150" cy="120" r="6" class="node-dot purple" />
+                    <line x1="100" y1="70" x2="130" y2="40" class="node-link" />
+                    <line x1="130" y1="40" x2="150" y2="120" class="node-link" />
+                  </g>
+                </svg>
+              </div>
+              <span class="project-num">01</span>
+            </div>
+
+            <div class="project-card-body">
+              <span class="project-cat">MACHINE LEARNING • HEALTHCARE AI</span>
+              <h3 class="project-title">AI Heart Disease Diagnosis</h3>
+              <p class="project-summary">
+                Intelligent predictive diagnostic model leveraging Logistic Regression, Naive Bayes, and SVM to analyze cardiovascular risk parameters.
+              </p>
+              
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Scikit-learn</span>
+                <span class="tag">SVM</span>
+                <span class="tag">Naive Bayes</span>
+              </div>
+
+              <div class="project-actions">
+                <button class="cyber-btn sm-btn view-details-btn" data-project="1">
+                  <span>VIEW DETAILS <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 02: Audio Emotion Detection -->
+          <article class="project-card glass-panel reveal-element" data-project-id="2">
+            <div class="project-card-banner banner-audio">
+              <div class="banner-svg-wrapper">
+                <!-- SVG Audio Waveform Visual -->
+                <svg viewBox="0 0 400 200" class="project-svg">
+                  <g class="spectrum-bars">
+                    <rect x="30" y="80" width="8" height="40" rx="4" class="bar-elem" />
+                    <rect x="50" y="50" width="8" height="100" rx="4" class="bar-elem" />
+                    <rect x="70" y="30" width="8" height="140" rx="4" class="bar-elem" />
+                    <rect x="90" y="60" width="8" height="80" rx="4" class="bar-elem" />
+                    <rect x="110" y="20" width="8" height="160" rx="4" class="bar-elem" />
+                    <rect x="130" y="70" width="8" height="60" rx="4" class="bar-elem" />
+                    <rect x="150" y="40" width="8" height="120" rx="4" class="bar-elem" />
+                    <rect x="170" y="90" width="8" height="20" rx="4" class="bar-elem" />
+                  </g>
+                  <path class="audio-wave" d="M 200 100 Q 250 20 300 100 T 400 100" />
+                </svg>
+              </div>
+              <span class="project-num">02</span>
+            </div>
+
+            <div class="project-card-body">
+              <span class="project-cat">AUDIO PROCESSING • MACHINE LEARNING</span>
+              <h3 class="project-title">Audio Emotion Detection</h3>
+              <p class="project-summary">
+                Acoustic feature extraction system using Librosa and SVM classification to detect emotional speech patterns from raw audio waveforms.
+              </p>
+              
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Librosa</span>
+                <span class="tag">NumPy</span>
+                <span class="tag">Scikit-learn</span>
+              </div>
+
+              <div class="project-actions">
+                <button class="cyber-btn sm-btn view-details-btn" data-project="2">
+                  <span>VIEW DETAILS <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 03: BloodLink AI -->
+          <article class="project-card glass-panel reveal-element" data-project-id="3">
+            <div class="project-card-banner banner-blood">
+              <div class="banner-svg-wrapper">
+                <!-- SVG Donor Node Network -->
+                <svg viewBox="0 0 400 200" class="project-svg">
+                  <path d="M 200 40 C 200 40 140 110 140 145 C 140 175 167 190 200 190 C 233 190 260 175 260 145 C 260 110 200 40 200 40 Z" class="blood-drop" />
+                  <g class="donor-network">
+                    <circle cx="80" cy="100" r="10" class="donor-node" />
+                    <circle cx="320" cy="100" r="10" class="donor-node" />
+                    <circle cx="200" cy="120" r="12" class="donor-node center-node" />
+                    <line x1="80" y1="100" x2="200" y2="120" class="network-pulse" />
+                    <line x1="320" y1="100" x2="200" y2="120" class="network-pulse" />
+                  </g>
+                </svg>
+              </div>
+              <span class="project-num">03</span>
+            </div>
+
+            <div class="project-card-body">
+              <span class="project-cat">SMART HEALTHCARE • AI MATCHING</span>
+              <h3 class="project-title">BloodLink AI Donor Platform</h3>
+              <p class="project-summary">
+                Smart donor-patient matching concept utilizing algorithmic location proximity, blood group compatibility, and real-time network optimization.
+              </p>
+              
+              <div class="project-tags">
+                <span class="tag">AI Concept</span>
+                <span class="tag">Python</span>
+                <span class="tag">Algorithms</span>
+                <span class="tag">UI/UX</span>
+              </div>
+
+              <div class="project-actions">
+                <button class="cyber-btn sm-btn view-details-btn" data-project="3">
+                  <span>VIEW DETAILS <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 04: Hotel Booking Web Application -->
+          <article class="project-card glass-panel reveal-element" data-project-id="4">
+            <div class="project-card-banner banner-hotel">
+              <div class="banner-svg-wrapper">
+                <!-- SVG Hotel Interface Visual -->
+                <svg viewBox="0 0 400 200" class="project-svg">
+                  <rect x="50" y="30" width="300" height="140" rx="8" class="ui-window" />
+                  <rect x="70" y="50" width="120" height="70" rx="4" class="ui-card-elem" />
+                  <rect x="210" y="50" width="120" height="70" rx="4" class="ui-card-elem" />
+                  <line x1="70" y1="140" x2="330" y2="140" class="ui-line" />
+                  <circle cx="90" cy="155" r="4" class="ui-dot" />
+                  <circle cx="110" cy="155" r="4" class="ui-dot" />
+                </svg>
+              </div>
+              <span class="project-num">04</span>
+            </div>
+
+            <div class="project-card-body">
+              <span class="project-cat">FULL STACK WEB DEVELOPMENT</span>
+              <h3 class="project-title">Hotel Booking Web Application</h3>
+              <p class="project-summary">
+                Comprehensive web application featuring dynamic hotel listings, user registration, room booking engine, and booking history tracking.
+              </p>
+              
+              <div class="project-tags">
+                <span class="tag">HTML/CSS</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Web UI</span>
+                <span class="tag">State Persistence</span>
+              </div>
+
+              <div class="project-actions">
+                <button class="cyber-btn sm-btn view-details-btn" data-project="4">
+                  <span>VIEW DETAILS <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 05: Food Ordering Web Application -->
+          <article class="project-card glass-panel reveal-element" data-project-id="5">
+            <div class="project-card-banner banner-food">
+              <div class="banner-svg-wrapper">
+                <!-- SVG Food Ordering Visual -->
+                <svg viewBox="0 0 400 200" class="project-svg">
+                  <circle cx="120" cy="100" r="50" class="plate-circle" />
+                  <path d="M 230 70 L 330 70 L 320 130 L 240 130 Z" class="cart-box" />
+                  <circle cx="260" cy="145" r="8" class="cart-wheel" />
+                  <circle cx="300" cy="145" r="8" class="cart-wheel" />
+                </svg>
+              </div>
+              <span class="project-num">05</span>
+            </div>
+
+            <div class="project-card-body">
+              <span class="project-cat">WEB APPLICATION • INTERACTIVE UI</span>
+              <h3 class="project-title">Food Ordering Web Application</h3>
+              <p class="project-summary">
+                Dynamic food ordering platform with interactive item filtering, live cart management, checkout state calculations, and responsive interface.
+              </p>
+              
+              <div class="project-tags">
+                <span class="tag">JavaScript</span>
+                <span class="tag">DOM API</span>
+                <span class="tag">Cart State</span>
+                <span class="tag">UI/UX</span>
+              </div>
+
+              <div class="project-actions">
+                <button class="cyber-btn sm-btn view-details-btn" data-project="5">
+                  <span>VIEW DETAILS <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 06: React Applications -->
+          <article class="project-card glass-panel reveal-element" data-project-id="6">
+            <div class="project-card-banner banner-react">
+              <div class="banner-svg-wrapper">
+                <!-- SVG React 3D Atom Visual -->
+                <svg viewBox="0 0 400 200" class="project-svg">
+                  <ellipse cx="200" cy="100" rx="90" ry="30" class="react-ellipse e1" />
+                  <ellipse cx="200" cy="100" rx="90" ry="30" class="react-ellipse e2" transform="rotate(60, 200, 100)" />
+                  <ellipse cx="200" cy="100" rx="90" ry="30" class="react-ellipse e3" transform="rotate(120, 200, 100)" />
+                  <circle cx="200" cy="100" r="12" class="react-core" />
+                </svg>
+              </div>
+              <span class="project-num">06</span>
+            </div>
+
+            <div class="project-card-body">
+              <span class="project-cat">FRONTEND FRAMEWORK • REACT</span>
+              <h3 class="project-title">React Component Applications</h3>
+              <p class="project-summary">
+                Suite of modern React single-page applications showcasing modular components, props, hooks, useEffect side-effects, and API integration.
+              </p>
+              
+              <div class="project-tags">
+                <span class="tag">React</span>
+                <span class="tag">JSX</span>
+                <span class="tag">Hooks</span>
+                <span class="tag">REST API</span>
+              </div>
+
+              <div class="project-actions">
+                <button class="cyber-btn sm-btn view-details-btn" data-project="6">
+                  <span>VIEW DETAILS <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 07: Selenium Automated Testing -->
+          <article class="project-card glass-panel reveal-element" data-project-id="7">
+            <div class="project-card-banner banner-selenium">
+              <div class="banner-svg-wrapper">
+                <!-- SVG Automation Browser Visual -->
+                <svg viewBox="0 0 400 200" class="project-svg">
+                  <rect x="60" y="40" width="280" height="130" rx="6" class="browser-frame" />
+                  <line x1="60" y1="65" x2="340" y2="65" class="browser-header-line" />
+                  <circle cx="80" cy="52" r="4" class="b-btn red" />
+                  <circle cx="95" cy="52" r="4" class="b-btn yellow" />
+                  <circle cx="110" cy="52" r="4" class="b-btn green" />
+                  <path d="M 100 110 L 120 130 L 160 90" class="check-icon" />
+                  <text x="180" y="115" class="term-text">TEST_PASSED [OK]</text>
+                </svg>
+              </div>
+              <span class="project-num">07</span>
+            </div>
+
+            <div class="project-card-body">
+              <span class="project-cat">AUTOMATION • QUALITY ENGINEERING</span>
+              <h3 class="project-title">Selenium Automated Testing Suite</h3>
+              <p class="project-summary">
+                Automated web browser test suite utilizing Python Selenium for web driver interaction, element validation, and test report generation.
+              </p>
+              
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Selenium</span>
+                <span class="tag">Automation</span>
+                <span class="tag">QA Testing</span>
+              </div>
+
+              <div class="project-actions">
+                <button class="cyber-btn sm-btn view-details-btn" data-project="7">
+                  <span>VIEW DETAILS <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 08: Interactive Portfolio Website -->
+          <article class="project-card glass-panel reveal-element" data-project-id="8">
+            <div class="project-card-banner banner-portfolio">
+              <div class="banner-svg-wrapper">
+                <!-- SVG Cybernetic HUD Visual -->
+                <svg viewBox="0 0 400 200" class="project-svg">
+                  <circle cx="200" cy="100" r="60" class="hud-circle" />
+                  <circle cx="200" cy="100" r="40" class="hud-circle-dash" />
+                  <path d="M 120 100 L 280 100 M 200 20 L 200 180" class="hud-crosshair" />
+                </svg>
+              </div>
+              <span class="project-num">08</span>
+            </div>
+
+            <div class="project-card-body">
+              <span class="project-cat">CREATIVE ENGINEERING • THIS WEBSITE</span>
+              <h3 class="project-title">Interactive Cyber Portfolio</h3>
+              <p class="project-summary">
+                Designed and engineered by Tharun P featuring custom 3D two-photo infinity transitions, glassmorphism UI, and particle trajectory engines.
+              </p>
+              
+              <div class="project-tags">
+                <span class="tag">HTML5 / CSS3</span>
+                <span class="tag">Canvas API</span>
+                <span class="tag">3D Transforms</span>
+                <span class="tag">UI/UX</span>
+              </div>
+
+              <div class="project-actions">
+                <button class="cyber-btn sm-btn view-details-btn" data-project="8">
+                  <span>VIEW DETAILS <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         THE JOURNEY SECTION (TIMELINE)
+         ========================================== -->
+    <section id="journey" class="section-padding">
+      <div class="section-container">
+        
+        <div class="section-header center">
+          <span class="section-subtitle">// DEVELOPMENT TIMELINE</span>
+          <h2 class="section-title">THE <span class="text-gradient">JOURNEY</span></h2>
+          <p class="section-desc">My evolving path through programming, web development, and artificial intelligence.</p>
+          <div class="title-underline"></div>
+        </div>
+
+        <div class="timeline-wrapper">
+          <div class="timeline-line"></div>
+
+          <!-- Step 1: START -->
+          <div class="timeline-item left reveal-element">
+            <div class="timeline-dot"><i class="fa-solid fa-seedling"></i></div>
+            <div class="timeline-content glass-panel">
+              <span class="step-badge">STAGE 01</span>
+              <h3>START — Core Fundamentals</h3>
+              <p>Began my journey learning foundational programming concepts in Python and Java, along with core HTML and CSS web structure.</p>
+            </div>
+          </div>
+
+          <!-- Step 2: BUILD -->
+          <div class="timeline-item right reveal-element">
+            <div class="timeline-dot"><i class="fa-solid fa-hammer"></i></div>
+            <div class="timeline-content glass-panel">
+              <span class="step-badge">STAGE 02</span>
+              <h3>BUILD — Web Development</h3>
+              <p>Constructed interactive web applications, mastering DOM manipulation, responsive layouts, and stateful interfaces like hotel booking and food apps.</p>
+            </div>
+          </div>
+
+          <!-- Step 3: EXPLORE -->
+          <div class="timeline-item left reveal-element">
+            <div class="timeline-dot"><i class="fa-solid fa-brain"></i></div>
+            <div class="timeline-content glass-panel">
+              <span class="step-badge">STAGE 03</span>
+              <h3>EXPLORE — Artificial Intelligence</h3>
+              <p>Dived deep into Data Science and Machine Learning. Studied Scikit-learn, NumPy, Pandas, and algorithms like Logistic Regression and SVM.</p>
+            </div>
+          </div>
+
+          <!-- Step 4: CREATE -->
+          <div class="timeline-item right reveal-element">
+            <div class="timeline-dot"><i class="fa-solid fa-flask"></i></div>
+            <div class="timeline-content glass-panel">
+              <span class="step-badge">STAGE 04</span>
+              <h3>CREATE — AI & ML Projects</h3>
+              <p>Built specialized machine learning solutions including Heart Disease Medical Diagnosis and Audio Emotion Recognition using Librosa.</p>
+            </div>
+          </div>
+
+          <!-- Step 5: EXPAND -->
+          <div class="timeline-item left reveal-element">
+            <div class="timeline-dot"><i class="fa-solid fa-atom"></i></div>
+            <div class="timeline-content glass-panel">
+              <span class="step-badge">STAGE 05</span>
+              <h3>EXPAND — React & Automation</h3>
+              <p>Expanded tech stack into React component architecture, REST API integrations, and Python Selenium automated web testing.</p>
+            </div>
+          </div>
+
+          <!-- Step 6: NOW -->
+          <div class="timeline-item right reveal-element">
+            <div class="timeline-dot"><i class="fa-solid fa-rocket"></i></div>
+            <div class="timeline-content glass-panel">
+              <span class="step-badge highlight">PRESENT</span>
+              <h3>NOW — Advanced Innovation</h3>
+              <p>Focusing on building intelligent full-stack applications that combine machine learning backends with futuristic, high-performance UI design.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         EDUCATION & ACHIEVEMENTS SECTION
+         ========================================== -->
+    <section id="education" class="section-padding dark-bg-alt">
+      <div class="section-container">
+        
+        <div class="section-header center">
+          <span class="section-subtitle">// ACADEMIC & RECOGNITION</span>
+          <h2 class="section-title">EDUCATION & <span class="text-gradient">ACHIEVEMENTS</span></h2>
+          <div class="title-underline"></div>
+        </div>
+
+        <div class="edu-achieve-grid">
+          
+          <!-- Education Column -->
+          <div class="edu-col reveal-element">
+            <h3 class="column-heading"><i class="fa-solid fa-graduation-cap"></i> Academic Path</h3>
+            
+            <div class="edu-card glass-panel">
+              <div class="edu-year-badge">Current Student</div>
+              <h4>Artificial Intelligence & Machine Learning</h4>
+              <p class="edu-degree">B.E.Computer Science Engineering(ARTICIAL INTELLIGENCE AND MACHINE LEARNING)</p>
+              <p class="edu-desc">
+                Focusing on core Machine Learning theory, Data Structures, Algorithms, Web Engineering, and Software Architecture.
+              </p>
+            </div>
+          </div>
+
+          <!-- Achievements Column -->
+          <div class="achieve-col reveal-element">
+            <h3 class="column-heading"><i class="fa-solid fa-trophy"></i> Key Achievements</h3>
+            
+            <div class="achieve-cards-stack">
+              <div class="achieve-card glass-panel">
+                <div class="achieve-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                <div class="achieve-info">
+                  <h4>Startup Exhibition Participation</h4>
+                  <p>Presented innovative tech solutions and project concepts at competitive startup exhibitions.</p>
+                </div>
+              </div>
+
+              <div class="achieve-card glass-panel">
+                <div class="achieve-icon"><i class="fa-solid fa-award"></i></div>
+                <div class="achieve-info">
+                  <h4>Best Team Award</h4>
+                  <p>Recognized for outstanding collaborative execution and technical contribution in team hackathons/events.</p>
+                </div>
+              </div>
+
+              <div class="achieve-card glass-panel">
+                <div class="achieve-icon"><i class="fa-solid fa-briefcase"></i></div>
+                <div class="achieve-info">
+                  <h4>Project & Practical Excellence</h4>
+                  <p>Successfully designed and deployed multiple functional AI models and responsive web platforms.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         CONTACT SECTION
+         ========================================== -->
+    <section id="contact" class="section-padding">
+      <div class="section-container">
+        
+        <div class="section-header center">
+          <span class="section-subtitle">// INITIATE CONNECTION</span>
+          <h2 class="section-title">LET'S BUILD <span class="text-gradient">SOMETHING</span></h2>
+          <p class="section-desc">Have an idea, project or opportunity? Let's turn it into something real.</p>
+          <div class="title-underline"></div>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Contact Direct Details -->
+          <div class="contact-info-col reveal-element">
+            <div class="contact-info-card glass-panel">
+              <h3>Connect Directly</h3>
+              <p>I am always open to discussing AI/ML projects, web development opportunities, or creative collaborations.</p>
+
+              <div class="contact-methods">
+                <div class="method-item">
+                  <div class="method-icon"><i class="fa-solid fa-envelope"></i></div>
+                  <div class="method-details">
+                    <span class="label">Direct Email</span>
+                    <a href="mailto:tharunparthiban2006@gmail.com" class="value">tharunparthiban2006@gmail.com</a>
+                  </div>
+                </div>
+
+                <div class="method-item">
+                  <div class="method-icon"><i class="fa-brands fa-github"></i></div>
+                  <div class="method-details">
+                    <span class="label">GitHub</span>
+                    <a href="https://github.com" target="_blank" rel="noopener" class="value">github.com/tharun-p</a>
+                  </div>
+                </div>
+
+                <div class="method-item">
+                  <div class="method-icon"><i class="fa-brands fa-linkedin"></i></div>
+                  <div class="method-details">
+                    <span class="label">LinkedIn</span>
+                    <a href="https://www.linkedin.com/in/tharun-p-dce-chennai-901892342?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener" class="value">tharun-p-dce-chennai</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="status-indicator-box">
+                <span class="online-dot"></span>
+                <span>AVAILABLE FOR NEW PROJECTS & ROLES</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-col reveal-element">
+            <form id="contact-form" action="/api/contact" method="POST" class="cyber-form glass-panel">
+              <!-- FormSubmit Email & Auto-Reply Configuration -->
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_subject" id="form-subject" value="New Portfolio Transmission for Tharun P">
+              <input type="hidden" name="_autoresponse" id="form-autoresponse" value="Dear Valued Visitor,&#10;&#10;Thank you so much for reaching out through my portfolio website!&#10;&#10;I have received your transmission and will review your project inquiry or collaboration details personally. You can expect a response within 24 hours.&#10;&#10;In the meantime, feel free to connect with me directly on LinkedIn:&#10;https://www.linkedin.com/in/tharun-p-dce-chennai-901892342&#10;&#10;Warm regards,&#10;Tharun P&#10;AI &amp; ML Engineer • Creative Full-Stack Developer&#10;Chennai, Tamil Nadu, India&#10;GitHub: https://github.com">
+
+              <div class="form-group">
+                <label for="user_name">YOUR NAME</label>
+                <input type="text" id="user_name" name="name" placeholder="John Doe" required>
+                <span class="focus-border"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="user_email">YOUR EMAIL</label>
+                <input type="email" id="user_email" name="email" placeholder="john@example.com" required>
+                <span class="focus-border"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="user_message">PROJECT OR MESSAGE DETAILS</label>
+                <textarea id="user_message" name="message" rows="5" placeholder="Tell me about your idea or opportunity..." required></textarea>
+                <span class="focus-border"></span>
+              </div>
+
+              <button type="submit" class="cyber-btn primary-btn block-btn" id="submit-btn">
+                <span class="btn-text">SEND MESSAGE &bull; DISPATCH THANKING MAIL <i class="fa-solid fa-paper-plane"></i></span>
+              </button>
+
+              <div class="form-footer-actions">
+                <span class="auto-reply-note"><i class="fa-solid fa-bolt-lightning"></i> Sends mail to Tharun &amp; automatically sends back a thanking mail to your email.</span>
+                <button type="button" class="mailto-link-btn" id="launch-mailto-btn">
+                  <i class="fa-solid fa-envelope-open-text"></i> Prefer sending via your email app? Click here to launch mailto
+                </button>
+              </div>
+
+              <div id="form-toast" class="form-toast-msg" role="status" aria-live="polite"></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================
+       DYNAMIC PROJECT DETAILS MODAL
+       ========================================== -->
+  <div id="project-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-content glass-panel">
+      <button class="modal-close-btn" id="modal-close" aria-label="Close details modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="modal-header">
+        <span class="modal-cat" id="modal-category">CATEGORY</span>
+        <h2 class="modal-title" id="modal-title">Project Title</h2>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-preview-box" id="modal-preview-box">
+          <!-- Dynamic SVG preview copied here -->
+        </div>
+
+        <div class="modal-detail-text">
+          <h3>Project Overview</h3>
+          <p id="modal-description">Full detailed explanation of the project...</p>
+          
+          <h3>Technical Architecture & Features</h3>
+          <ul id="modal-features-list">
+            <!-- Dynamic items -->
+          </ul>
+
+          <h3>Tech Stack Applied</h3>
+          <div class="modal-tags" id="modal-tags-container">
+            <!-- Dynamic tags -->
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="cyber-btn secondary-btn" id="modal-dismiss-btn">CLOSE WINDOW</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       THANKING MAIL MODAL (TRANSMISSION RECEIPT)
+       ========================================== -->
+  <div id="thank-you-mail-modal" class="modal-overlay thanking-mail-overlay" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-content glass-panel thanking-mail-content">
+      <button class="modal-close-btn" id="thank-modal-close" aria-label="Close thanking mail modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <!-- Envelope / Cyber Header Badge -->
+      <div class="thank-mail-header">
+        <div class="thank-mail-status-badge">
+          <span class="status-pulse-dot"></span>
+          <span class="badge-text" id="thank-badge-text">TRANSMISSION CONFIRMED &bull; AUTO-REPLY GENERATED</span>
+        </div>
+        <div class="thank-mail-icon-wrap">
+          <i class="fa-solid fa-envelope-circle-check"></i>
+        </div>
+        <h2 class="thank-mail-title">Thank You for Reaching Out!</h2>
+        <p class="thank-mail-subtitle">A personal acknowledgment transmission from Tharun P</p>
+
+        <!-- Live Inbox Delivery Notice -->
+        <div class="thank-inbox-banner" id="thank-inbox-banner">
+          <div class="inbox-banner-icon"><i class="fa-solid fa-inbox"></i></div>
+          <div class="inbox-banner-text">
+            <strong>Thanking Mail Sent to Your Inbox:</strong>
+            <span id="thank-inbox-email">your.email@example.com</span>. Please check your email inbox (and spam folder) for the confirmation message from Tharun P.
+          </div>
+        </div>
+      </div>
+
+      <!-- Cyber Email Letter Card -->
+      <div class="thank-mail-letter-card">
+        <div class="letter-meta-header">
+          <div class="meta-row">
+            <span class="meta-label"><i class="fa-solid fa-user-astronaut"></i> FROM:</span>
+            <span class="meta-value"><strong>Tharun P</strong> &lt;tharunparthiban2006@gmail.com&gt;</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label"><i class="fa-solid fa-user-check"></i> TO:</span>
+            <span class="meta-value"><strong id="thank-recipient-name">Valued Visitor</strong> &lt;<span id="thank-recipient-email">your.email@example.com</span>&gt;</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label"><i class="fa-regular fa-clock"></i> DATE:</span>
+            <span class="meta-value" id="thank-letter-date">Just Now</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label"><i class="fa-solid fa-tag"></i> SUBJECT:</span>
+            <span class="meta-value" id="thank-letter-subject">Re: Thank you for getting in touch!</span>
+          </div>
+        </div>
+
+        <div class="letter-divider"></div>
+
+        <div class="letter-body">
+          <p class="letter-greeting">Hi <span id="thank-greeting-name">there</span>,</p>
+          <p>
+            Thank you so much for reaching out through my portfolio website! Your transmission has been queued and opened in your email client for direct delivery to my inbox.
+          </p>
+          <div class="letter-quote-box">
+            <div class="quote-header"><i class="fa-solid fa-quote-left"></i> Your Message Reference</div>
+            <p id="thank-message-excerpt">"Your message will appear here..."</p>
+          </div>
+          <p>
+            I personally review every inquiry regarding <strong>Machine Learning &amp; AI development</strong>, <strong>Full-Stack projects</strong>, and <strong>creative technology collaborations</strong>. You can expect a response within <strong>24 hours</strong>.
+          </p>
+          <p>
+            If your requirement is time-sensitive, feel free to also connect directly with me on <a href="https://www.linkedin.com/in/tharun-p-dce-chennai-901892342?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener" class="neon-link">LinkedIn</a> or check out my open-source work on <a href="https://github.com" target="_blank" rel="noopener" class="neon-link">GitHub</a>.
+          </p>
+          <div class="letter-signoff">
+            <p class="signoff-regards">Warm regards,</p>
+            <div class="signoff-signature">
+              <span class="sign-name">Tharun P</span>
+              <span class="sign-title">AI &amp; ML Engineer &bull; Creative Full-Stack Developer</span>
+              <span class="sign-loc"><i class="fa-solid fa-location-dot"></i> Chennai, Tamil Nadu, India</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="thank-modal-footer">
+        <button class="cyber-btn secondary-btn" id="thank-copy-btn" type="button">
+          <i class="fa-regular fa-copy"></i> <span id="thank-copy-text">COPY LETTER</span>
+        </button>
+        <a href="https://www.linkedin.com/in/tharun-p-dce-chennai-901892342?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener" class="cyber-btn primary-btn">
+          <i class="fa-brands fa-linkedin"></i> CONNECT ON LINKEDIN
+        </a>
+        <button class="cyber-btn glass-btn" id="thank-dismiss-btn" type="button">
+          CLOSE WINDOW
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer class="cyber-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <span class="logo-accent">&lt;</span>THARUN<span class="logo-dot">.</span>P<span class="logo-accent">/&gt;</span>
+        <p class="footer-tagline">AI/ML DEVELOPER • CREATIVE DEVELOPER</p>
+      </div>
+      
+      <div class="footer-neon-line"></div>
+
+      <p class="footer-copy">
+        Designed & Built with code + creativity &copy; <span id="current-year">2026</span> Tharun P. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Three.js 3D WebGL Library & glTF Loader -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
